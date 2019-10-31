@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+/* --General-- */
+:root {
+    --main_font: 'Montserrat', Verdana, sans-serif;
+    --background_main: rgb(46,50,61)/*rgb(24,24,32)*/;
+	--background_section: rgb(245, 245, 245)/*rgb(255,226,196)*/;
+    --font_color: rgb(42,65,79)/*rgb(52,7,10)*/;
+    --shadow_color: rgb(91,125,134)/*rgb(154,82,106)*/;
+    --detail_color: rgb(23, 52, 179)/*rgb(138,19,41)*/;
+    --main_time: .5s;
+    --detail_time: .2s;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: var(--background_main);
+    font-family: var(--main_font);
+    color: var(--font_color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 64px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.block {
+    display: block;
+}
