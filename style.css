@@ -35,7 +35,7 @@ a {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 60px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -44,7 +44,7 @@ h2 {
 	font-size: 48px;
 }
 
-section {
+section, nav {
     width: 80%;
     margin: 0 auto;
 }
@@ -56,3 +56,79 @@ section {
 .block {
     display: block;
 }
+/* --Navigation-- */
+nav {
+    padding: 30px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul a {
+    color: var(--background_section);
+    text-transform: capitalize;
+    font-size: 20px 0;
+    font-weight: 700;
+    padding: 20px;
+    transition: all var(--main_time);
+}
+
+nav ul a:hover {
+    background-image: linear-gradient(0deg, var(--shadow_color), var(--background_main));
+    box-shadow: 0 8px 4px 4px var(--shadow_color);
+    background-origin: bottom;
+}
+
+/* --Sidebar-- */
+aside .social {
+	z-index: 5;
+    top: 50%;
+    left: 30px;
+	transform: translateY(-50%);
+}
+
+aside .social a {
+	color: var(--font_color);
+	background-color: var(--background_section);
+	font-size: 24px;
+	line-height: 48px;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	text-align: center;
+	margin-bottom: 15px;
+	border: 6px dashed var(--shadow_color);
+	box-shadow: 0 0 8px 6px var(--shadow_color);
+	transition: all var(--main_time);
+}
+
+aside .social a:hover i {
+	transition: all var(--main_time);
+}
+
+aside .social a:hover {
+	transform: rotate(90deg);
+}
+
+aside .social a:hover i {
+	transform: rotate(-90deg);
+	color: var(--detail_color);
+}
+
+aside .social a:last-child {
+	margin-bottom: 0;
+}
+
+/* --Footer-- */
+footer p {
+    line-height: 2;
+    font-size: 14px;
+    text-align: center;
+    color: var(--background_section);
+}
+
+/* --RWD-- */
