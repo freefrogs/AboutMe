@@ -137,6 +137,10 @@ nav ul a:hover {
     transform: rotate(-0.5deg);
 }
 
+.home:hover {
+    transform: rotate(1deg);
+}
+
 .home header {
 	padding-left: 10%;
 	padding-top: 7%;
@@ -162,11 +166,36 @@ nav ul a:hover {
 	height: auto;
 }
 
-.home:hover {
-    transform: rotate(1deg);
+/* --About me-- */
+.aboutMe {
+    transform: translatex(10px);
 }
 
-/* --About me-- */
+.aboutMe:hover {
+    transform: translatex(5px);
+}
+
+.about {
+	padding: 5%;
+	margin: 2% auto;
+	text-align: justify;
+}
+
+.about:first-child {
+	text-align-last: right;
+}
+
+.about:last-child {
+	text-align-last: left;
+}
+
+.about h3 {
+	margin-bottom: 2%;
+}
+
+.about:first-child {
+	border-right: 2px dashed var(--detail_color);
+}
 
 /* --Skills-- */
 
@@ -288,6 +317,20 @@ footer p {
     .home a {
         margin: 10px auto 20px;
     }
+    /* --About me-- */
+	.about {
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto;
+		padding: 5%;
+		margin-top: 2%;
+		-ms-flex: 100%;
+			flex: 100%;
+	}
+	.about:first-child {
+		border-right: none;
+		border-bottom: 2px dashed var(--detail_color);
+	}
     /* --Footer-- */
     footer {
         margin-top: 20px;
