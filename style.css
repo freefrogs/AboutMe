@@ -374,9 +374,84 @@ nav ul a:hover {
     padding: 5px;
 }
 
-
-
 /* --Contact-- */
+.contact {
+    transform: translateX(-10px);
+}
+
+.contact:hover {
+    transform: translateX(-5px);
+}
+
+.contact .sectionContainer {
+    grid-template: auto / 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px 0;
+}
+
+.contactData {
+    border-right: 2px dashed var(--detail_color);
+}
+
+.contactData p {
+    padding: 3px;
+    font-weight: 700;
+}
+
+.contactData p:first-child {
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-weight: 400;
+}
+
+.contactForm {
+    padding: 20px;
+}
+
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed var(--detail_color);
+    background: inherit;
+    padding: 2px 0;
+    margin-bottom: 15px;
+    font-family: var(--main_font);
+}
+
+.contactForm input:-ms-input-placeholder .contactForm textarea:-ms-input-placeholder {
+    font-size: 14px;
+}
+
+.contactForm input::placeholder .contactForm textarea::placeholder {
+    font-size: 14px;
+}
+
+.contactForm input:focus, .contactForm textarea:focus {
+    border: none;
+    border-bottom: 1px solid var(--font_color);
+    outline: 0;
+}
+
+.contactForm input:required {
+    border-bottom: 2px solid var(--detail_color);
+}
+
+.contact form {
+    text-align: left;
+}
+
+.contact textarea {
+    resize: none;
+}
+
+.contact button {
+    border: none;
+}
+
+.contact small {
+    font-size: 12px;
+    color: var(--detail_color)
+}
 
 /* --Sidebar-- */
 aside .social {
@@ -456,6 +531,13 @@ footer p {
     .logos img {
         width: 15%;
     }
+    /* --Contact-- */
+    .contact .sectionContainer {
+        grid-template: auto / 2fr 3fr;
+    }
+    .contact p {
+        font-size: 14px;
+    }
 }
 @media (orientation: portrait), (max-width: 950px) {
     /* --General-- */
@@ -527,6 +609,18 @@ footer p {
     .portfolio .sectionContainer {
         grid-template: repeat(6, auto) / 1fr;
         grid-gap: 30px;
+    }
+    /* --Contact-- */
+    .contact .sectionContainer {
+        grid-template: auto auto / 1fr;
+        grid-gap: 
+    }
+    .contactData {
+        border-right: none;
+        border-bottom: 2px dashed var(--detail_color);
+    }
+    .contactData p:first-child {
+        padding-right: 3px;
     }
     /* --Footer-- */
     footer {
