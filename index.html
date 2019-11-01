@@ -12,7 +12,7 @@
     </head>
     <body>
         <nav>
-            <ul>
+            <ul class="flex">
                 <li><a href="#aboutMe">about me</a></li>
                 <li><a href="#skills">skills</a></li>
                 <li><a href="#portfolio">portfolio</a></li>
@@ -22,7 +22,7 @@
         <main>
             <section class="home">
                 <h1>welcome</h1>
-                <div class="sectionContainer">
+                <div class="sectionContainer flex flexJustifyCenter">
                     <header>
                         <h2>Hello!</h2>
                         <p>My name is <span class="spanDetail">Justyna</span> I am Frontend Developer</p>
@@ -33,7 +33,7 @@
             </section>
             <section class="aboutMe" id="aboutMe">
                 <h1>about me</h1>
-                <div class="sectionContainer">
+                <div class="sectionContainer flex flexJustifyCenter">
                     <div class="about">
                         <h3>Who am I professionally?</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, deleniti. Sequi eligendi ab fugit quibusdam dolorum similique officiis maiores veniam! Lorem ipsum dolor sit amet. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde deleniti, nesciunt iusto dolore recusandae!</p>
@@ -46,7 +46,7 @@
             </section>
             <section class="skills" id="skills">
                 <h1>skills</h1>
-                <div class="sectionContainer">
+                <div class="sectionContainer grid">
                     <div class="skill skill1">
                         <h3>frontend - medium</h3>
                         <p>Knowledge of HTML5, CSS3,<br>RWD methods, Bootstrap (3 & 4),<br>Github & Git version control system</p>
@@ -103,8 +103,49 @@
             </section>
             <section class="portfolio" id="portfolio">
                 <h1>portfolio</h1>
-                <div class="sectionContainer">
-                    
+                <div class="sectionContainer grid">
+                    <div class="project">
+                        <img src="img/portfolio/project1.png" alt="view project 1">
+                        <a href="https://freefrogs.github.io/PORTFOLIO_3/" class="fa_icon flex flexJustifyCenter" target="_blank">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, officia.</p>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="img/portfolio/project2.png" alt="view project 2">
+                        <a href="https://freefrogs.github.io/EX_Bootstrap_4/" class="fa_icon flex flexJustifyCenter" target="_blank">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, quos.</p>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="img/portfolio/project3.png" alt="view project 3">
+                        <a href="https://freefrogs.github.io/Trusiaczki-nav-hero/" class="fa_icon flex flexJustifyCenter" target="_blank">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, nam!</p>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="img/portfolio/project4.png" alt="view project 4">
+                        <a href="https://freefrogs.github.io/PORTFOLIO_1/" class="fa_icon flex flexJustifyCenter" target="_blank">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, vitae?</p>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="img/portfolio/project5.png" alt="view project 5">
+                        <a href="https://guarded-tor-43432.herokuapp.com/" class="flex flexJustifyCenter" target="_blank">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, libero?</p>
+                            <img src="img/logos/heroku.png" alt="heroku logo">
+                        </a>
+                    </div>
+                    <div class="project">
+                        <img src="img/portfolio/project6.png" alt="view project 6">
+                        <a href="https://freefrogs.github.io/PORTFOLIO_4/" class="fa_icon flex flexJustifyCenter" target="_blank">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, vero!</p>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </section>
             <section class="contact" id="contact">

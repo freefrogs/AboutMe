@@ -63,10 +63,6 @@ section {
 .sectionContainer {
 	width: 90%;
 	margin: 0 auto;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-pack: center;
-	    justify-content: center;
 }
 
 .spanDetail {
@@ -100,6 +96,21 @@ section {
     display: block;
 }
 
+.flex {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flexJustifyCenter {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+}
+
 /* --Navigation-- */
 nav {
     padding: 30px;
@@ -107,8 +118,6 @@ nav {
 }
 
 nav ul {
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
     -ms-flex-align: center;
@@ -216,8 +225,6 @@ nav ul a:hover {
 }
 
 .skills .sectionContainer {
-    display: -ms-grid;
-    display: grid;
     grid-template: auto auto / 1fr 1fr;
     grid-gap: 10px;
     padding-bottom: 20px;
@@ -298,6 +305,76 @@ nav ul a:hover {
 }
 
 /* --Portfolio-- */
+.portfolio {
+    transform: rotate(-0.5deg);
+}
+
+.portfolio:hover {
+    transform: rotate(0deg);
+}
+
+.portfolio .sectionContainer {
+    grid-template: repeat(3, auto) / repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 20px 0;
+}
+
+.project{
+    transition: var(--main_time);
+    position: relative;
+}
+
+.project:hover{
+    transform: scale(1.1);
+}
+
+.project > img {
+    width: 100%;
+    height: auto;
+    outline: 2px dashed var(--detail_color);
+    outline-offset: 3px;
+}
+
+.project a {
+    color: var(--font_color);
+}
+
+.project a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    background-color: var(--background_section);
+    opacity: 0;
+    transition: var(--main_time);
+}
+
+.project a:hover {
+    opacity: 0.9;
+}
+
+.project p {
+    text-align: center;
+    padding: 0 20px;
+    font-weight: 700;
+}
+
+.project i {
+    font-size: 50px;
+}
+
+.project i, .project img {
+    padding: 5px;
+}
+
+
 
 /* --Contact-- */
 
@@ -445,6 +522,11 @@ footer p {
     }
     .skill3 {
         border-bottom: 2px dashed var(--detail_color);
+    }
+    /* --Portfolio-- */
+    .portfolio .sectionContainer {
+        grid-template: repeat(6, auto) / 1fr;
+        grid-gap: 30px;
     }
     /* --Footer-- */
     footer {
