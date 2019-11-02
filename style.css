@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
 @keyframes gearAnimation {
-    0% {left: 20px}
+    0% {left: 20px;}
     33% {left: 33vw; transform: rotate(360deg);}
     66% {left: 66vw; transform: rotate(720deg);}
     100% {left: calc(100vw - 75px); transform: rotate(1080deg);}
@@ -16,7 +16,7 @@
     --shadow_color: rgb(91,125,134)/*rgb(154,82,106)*/;
     --detail_color: rgb(23, 52, 179)/*rgb(138,19,41)*/;
     --main_time: .5s;
-    --detail_time: .2s;
+    --main_border_outline: 2px dashed var(--detail_color);
 }
 
 * {
@@ -39,6 +39,7 @@ ul {
 
 a {
     text-decoration: none;
+    transition: all var(--main_time);
 }
 
 h1 {
@@ -61,9 +62,8 @@ section {
     margin-bottom: 4%;
     padding: 20px;
     background: var(--background_section);
-    outline: 2px dashed var(--detail_color);
     outline-offset: -10px;
-    box-shadow: 0 0px 6px 4px var(--shadow_color);
+    box-shadow: 0 0 6px 4px var(--shadow_color);
     transition: all var(--main_time);
 }
 
@@ -86,7 +86,6 @@ section {
     border-radius: 10px;
     background-color: var(--shadow_color);
     box-shadow: 0 2px 4px 2px var(--font_color);
-    transition: var(--main_time);
     cursor: pointer;
 }
 
@@ -118,6 +117,10 @@ section {
     display: grid;
 }
 
+.outline {
+    outline: var(--main_border_outline);
+}
+
 /* --Navigation-- */
 nav {
     padding: 30px;
@@ -136,16 +139,14 @@ nav ul {
 nav ul a {
     color: var(--background_section);
     text-transform: capitalize;
-    font-size: 20px 0;
+    font-size: 20px;
     font-weight: 700;
     padding: 20px;
-    transition: all var(--main_time);
 }
 
 nav ul a:hover {
     background-image: linear-gradient(0deg, var(--shadow_color), var(--background_main));
     box-shadow: 0 8px 4px 4px var(--shadow_color);
-    background-origin: bottom;
 }
 
 /* --Home-- */
@@ -210,7 +211,7 @@ nav ul a:hover {
 }
 
 .about:first-child {
-	border-right: 2px dashed var(--detail_color);
+	border-right: var(--main_border_outline);
 }
 
 /* --Skills-- */
@@ -281,7 +282,7 @@ nav ul a:hover {
     z-index: 1;
     display: block;
     background-image: url(img/hover/pic1.png);
-    border: 2px dashed var(--detail_color);
+    border: var(--main_border_outline);
 }
 
 .skill {
@@ -289,7 +290,7 @@ nav ul a:hover {
 }
 
 .skill:nth-child(2n+1) {
-    border-right: 2px dashed var(--detail_color);
+    border-right: var(--main_border_outline);
 } 
 
 .skill:nth-child(2n+0) {
@@ -297,7 +298,7 @@ nav ul a:hover {
 }
 
 .skill:first-child, .skill:nth-child(2) {
-    border-bottom: 2px dashed var(--detail_color);
+    border-bottom: var(--main_border_outline);
 }
 
 .logos img {
@@ -308,7 +309,7 @@ nav ul a:hover {
 }
 
 .logos img:hover {
-    transform: rotateY(180deg);
+    transform: scale(1.2);
 }
 
 /* --Portfolio-- */
@@ -326,19 +327,18 @@ nav ul a:hover {
     padding: 20px 0;
 }
 
-.project{
-    transition: var(--main_time);
+.project {
+    transition: all var(--main_time);
     position: relative;
 }
 
-.project:hover{
+.project:hover {
     transform: scale(1.1);
 }
 
 .project > img {
     width: 100%;
     height: auto;
-    outline: 2px dashed var(--detail_color);
     outline-offset: 3px;
 }
 
@@ -360,7 +360,6 @@ nav ul a:hover {
         flex-wrap: wrap;
     background-color: var(--background_section);
     opacity: 0;
-    transition: var(--main_time);
 }
 
 .project a:hover {
@@ -397,7 +396,7 @@ nav ul a:hover {
 }
 
 .contactData {
-    border-right: 2px dashed var(--detail_color);
+    border-right: var(--main_border_outline);
 }
 
 .contactData p {
@@ -425,11 +424,11 @@ nav ul a:hover {
     font-family: var(--main_font);
 }
 
-.contactForm input:-ms-input-placeholder .contactForm textarea:-ms-input-placeholder {
+.contactForm input:-ms-input-placeholder, .contactForm textarea:-ms-input-placeholder {
     font-size: 14px;
 }
 
-.contactForm input::placeholder .contactForm textarea::placeholder {
+.contactForm input::placeholder, .contactForm textarea::placeholder {
     font-size: 14px;
 }
 
@@ -480,7 +479,6 @@ aside .social a {
 	margin-bottom: 15px;
 	border: 6px dashed var(--shadow_color);
 	box-shadow: 0 0 8px 6px var(--shadow_color);
-	transition: all var(--main_time);
 }
 
 aside .social a:hover i {
@@ -573,7 +571,7 @@ footer span:last-child {
         font-size: 14px;
     }
 }
-@media (orientation: portrait), (max-width: 950px) {
+@media (max-width: 950px) {
     /* --General-- */
     section, nav {
         width: 60%;
@@ -589,7 +587,11 @@ footer span:last-child {
     h2 {
         font-size: 30px;
     }
-    	/* --Home-- */
+    /* --Navigation-- */
+    nav ul a {
+        font-size: initial;
+    }
+    /* --Home-- */
 	.home img {
 		width: 60%;
 	}
@@ -627,7 +629,7 @@ footer span:last-child {
 	}
 	.about:first-child {
 		border-right: none;
-		border-bottom: 2px dashed var(--detail_color);
+		border-bottom: var(--main_border_outline);
     }
     /* --Skills-- */
     .skills .sectionContainer {
@@ -637,7 +639,7 @@ footer span:last-child {
         border-right: none;
     }
     .skill3 {
-        border-bottom: 2px dashed var(--detail_color);
+        border-bottom: var(--main_border_outline);
     }
     /* --Portfolio-- */
     .portfolio .sectionContainer {
@@ -647,11 +649,11 @@ footer span:last-child {
     /* --Contact-- */
     .contact .sectionContainer {
         grid-template: auto auto / 1fr;
-        grid-gap: 
+        grid-gap: 10px;
     }
     .contactData {
         border-right: none;
-        border-bottom: 2px dashed var(--detail_color);
+        border-bottom: var(--main_border_outline);
     }
     .contactData p:first-child {
         padding-right: 3px;
@@ -664,14 +666,14 @@ footer span:last-child {
         width: 20px;
     }
 }
-@media (orientation: portrait), (max-width: 820px) {
+@media (max-width: 820px) {
     /* --Navigation-- */
     nav {
         width: 80%;
     }
 }
 
-@media (orientation: portrait), (max-width: 610px) {
+@media (max-width: 610px) {
     section:first-child {
         margin-top: 20px;
     }
@@ -698,7 +700,6 @@ footer span:last-child {
     }
     nav ul a {
         padding: 10px;
-        background-color: ;
         border: 1px solid var(--background_section);
         background-image: linear-gradient(0deg, var(--shadow_color), var(--background_main));
     }
@@ -711,5 +712,16 @@ footer span:last-child {
     }
     footer span:first-child {
         animation-duration: 3s;
+    }
+}
+
+@media (max-width: 350px) {
+    /* --Skills-- */
+    .logos img {
+        display: none;
+    }
+    /* --Portfolio-- */
+    .project i {
+        font-size: 30px;
     }
 }
