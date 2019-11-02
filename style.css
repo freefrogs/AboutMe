@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+@keyframes gearAnimation {
+    0% {left: 20px}
+    33% {left: 33vw; transform: rotate(360deg);}
+    66% {left: 66vw; transform: rotate(720deg);}
+    100% {left: calc(100vw - 75px); transform: rotate(1080deg);}
+}
+
 /* --General-- */
 :root {
     --main_font: 'Montserrat', Verdana, sans-serif;
@@ -494,11 +501,38 @@ aside .social a:last-child {
 }
 
 /* --Footer-- */
+footer {
+    position: relative;
+    padding-top: 55px;
+}
+
 footer p {
+    padding-top: 10px;
     line-height: 2;
     font-size: 14px;
     text-align: center;
     color: var(--background_section);
+    border-top: 2px dashed var(--shadow_color);
+}
+
+footer span {
+    top: 0;
+    color: var(--background_section);
+    font-size: 50px;
+    text-shadow: 0 3px var(--shadow_color);
+    position: absolute;
+    animation: gearAnimation infinite;
+    animation-duration: 8s;
+}
+
+footer span:first-child {
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+footer span:last-child {
+    animation-timing-function: ease-in-out;
 }
 
 /* --RWD-- */
@@ -670,5 +704,12 @@ footer p {
     }
     section, nav {
         width: 90%;
+    }
+    /* --Footer-- */
+    footer span {
+        animation-duration: 5s
+    }
+    footer span:first-child {
+        animation-duration: 3s;
     }
 }
