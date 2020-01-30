@@ -1,11 +1,13 @@
 {
-  "name": "project1",
+  "name": "project2",
   "version": "1.0.0",
-  "description": "Landing page About Me",
+  "description": "Drawings - JS practice",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:html && npm run build:autoprefixer",
+    "test": "npm run test:html && npm run test:js && npm run build:autoprefixer",
+    "test:js": "glob-run jslint script.js",
     "test:html": "glob-run nu-html-checker index.html",
+    "test:css": "css-validator style.css",
     "build:autoprefixer": "autoprefixer-cli style.css"
   },
   "author": "",
@@ -14,6 +16,7 @@
     "autoprefixer-cli": "^1.0.0",
     "css-validator": "^0.9.0",
     "glob-run": "^0.1.7",
+    "jslint": "^0.11.0",
     "nu-html-checker": "^0.1.0"
   }
 }
