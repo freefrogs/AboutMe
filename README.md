@@ -1,10 +1,17 @@
-## Portfolio Page
-Welcome to my portfolio page!
+## :grin: Welcome to my Portfolio Page
 
-# Technology used:
-<ul>
-    <li>HTML</li>
-    <li>CSS</li>
-</ul>
+**Source code** at :house: [GitHub project homepage]( https://github.com/freefrogs/AboutMe)
 
-Check: https://freefrogs.github.io/CodersCamp-Project1/
+It was my training project as part of Bootcamp CodersCamp (2019, Warsaw group). Created to memorize the theoretical material and checked practical skills (from section: HTML and CSS - creating simple websites).
+
+Because it looks nice, I decided to improve it and that's how the Aboutme site was created.
+
+**Check** at :point_right: [GitHub Pages](https://freefrogs.github.io/AboutMe/)
+
+### Used technologies:
+* HTML5
+* CSS3
+* JavaScript (ES5+)
+
+### Credits:
+* icons from [Font Awesome](https://fontawesome.com/)
