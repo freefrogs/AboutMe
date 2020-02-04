@@ -4,7 +4,7 @@
 
 It was my training project as part of Bootcamp CodersCamp (2019, Warsaw group). Created to memorize the theoretical material and checked practical skills (from section: HTML and CSS - creating simple websites).
 
-Because it looks nice, I decided to improve it and that's how the Aboutme site was created.
+Because it looks nice, I decided to improve it and that's how the AboutMe site was created.
 
 **Check** at :point_right: [GitHub Pages](https://freefrogs.github.io/AboutMe/)
 
