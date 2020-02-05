@@ -68,7 +68,6 @@ section {
     background: var(--background_section);
     outline-offset: -10px;
     box-shadow: 0 0 6px 4px var(--shadow_color);
-    transition: all var(--main_time);
 }
 
 .sectionContainer {
@@ -157,10 +156,6 @@ nav ul a:hover {
     transform: rotate(-0.5deg);
 }
 
-.home:hover {
-    transform: rotate(1deg);
-}
-
 .home header {
 	padding-left: 10%;
 	padding-top: 7%;
@@ -191,10 +186,6 @@ nav ul a:hover {
     transform: translateX(10px);
 }
 
-.aboutMe:hover {
-    transform: translateX(5px);
-}
-
 .about {
 	padding: 2%;
 	margin: 2% auto;
@@ -220,10 +211,6 @@ nav ul a:hover {
 /* --Skills-- */
 .skills {
     transform: rotate(0.5deg);
-}
-
-.skills:hover {
-    transform: rotate(1deg);
 }
 
 .skills h1 {
@@ -320,14 +307,14 @@ nav ul a:hover {
     transform: rotate(-0.5deg);
 }
 
-.portfolio:hover {
-    transform: rotate(0deg);
-}
-
-.portfolio .sectionContainer {
+/* .portfolio .sectionContainer {
     grid-template: repeat(3, auto) / repeat(3, 1fr);
     grid-gap: 30px;
     padding: 20px 0;
+} */
+
+.projects {
+    padding: 5px;
 }
 
 .project {
@@ -335,14 +322,16 @@ nav ul a:hover {
     position: relative;
 }
 
-.project:hover {
+/* .project:hover {
     transform: scale(1.1);
-}
+} */
 
 .project > img {
-    width: 100%;
+    max-width: 95%;
+    padding: 1%;
     height: auto;
-    outline-offset: 1px;
+    margin: 5px 0;
+    box-shadow: 0 0 5px var(--detail_color);
 }
 
 .project a {
@@ -350,8 +339,11 @@ nav ul a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 98%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52.5%,-51%);
+    width: 95%;
+    height: 95%;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-line-pack: center;
@@ -391,6 +383,7 @@ nav ul a:hover {
 
 .filterBox a {
     margin: 10px;
+    text-align: center;
 }
 
 .filterBox a.current {
@@ -428,10 +421,6 @@ nav ul a:hover {
 /* --Contact-- */
 .contact {
     transform: translateX(-10px);
-}
-
-.contact:hover {
-    transform: translateX(-5px);
 }
 
 .contact .sectionContainer {
