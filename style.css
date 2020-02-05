@@ -325,8 +325,8 @@ nav ul a:hover {
 }
 
 .portfolio .sectionContainer {
-    grid-template: repeat(3, auto) / repeat(2, 1fr);
-    grid-gap: 50px;
+    grid-template: repeat(3, auto) / repeat(3, 1fr);
+    grid-gap: 30px;
     padding: 20px 0;
 }
 
@@ -342,19 +342,16 @@ nav ul a:hover {
 .project > img {
     width: 100%;
     height: auto;
-    outline-offset: 3px;
+    outline-offset: 1px;
 }
 
 .project a {
     color: var(--font_color);
-}
-
-.project a {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 98%;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-line-pack: center;
@@ -373,14 +370,31 @@ nav ul a:hover {
     text-align: center;
     padding: 0 20px;
     font-weight: 700;
+    font-size: 12px;
 }
 
 .project i {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .project i, .project img {
-    padding: 5px;
+    padding: 3px;
+}
+
+.filterBox {
+    width: 60%;
+    margin: 1% auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.filterBox a {
+    margin: 10px;
+}
+
+.filterBox a.current {
+    background-color: var(--detail_color);
 }
 
 /* --Contact-- */
