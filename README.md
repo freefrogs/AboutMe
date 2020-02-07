@@ -12,6 +12,7 @@ Because it looks nice, I decided to improve it and that's how the AboutMe site w
 * HTML5
 * CSS3
 * JavaScript (ES5+)
+* [jQuery Isotope](https://isotope.metafizzy.co/)
 
 ### Credits:
-* icons from [Font Awesome](https://fontawesome.com/)
+* icons from [Font Awesome](https://fontawesome.com/);

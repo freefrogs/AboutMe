@@ -307,24 +307,16 @@ nav ul a:hover {
     transform: rotate(-0.5deg);
 }
 
-/* .portfolio .sectionContainer {
-    grid-template: repeat(3, auto) / repeat(3, 1fr);
-    grid-gap: 30px;
-    padding: 20px 0;
-} */
-
 .projects {
     padding: 5px;
+    min-height: 40vh;
 }
 
 .project {
+/*     width: 32%; */
     transition: all var(--main_time);
     position: relative;
 }
-
-/* .project:hover {
-    transform: scale(1.1);
-} */
 
 .project > img {
     max-width: 95%;
@@ -374,7 +366,7 @@ nav ul a:hover {
 }
 
 .filterBox {
-    width: 60%;
+    width: 70%;
     margin: 1% auto;
     display: flex;
     justify-content: space-evenly;
@@ -597,6 +589,10 @@ footer span:last-child {
     .logos img {
         width: 15%;
     }
+    /* --Portfolio-- */
+    /* .project {
+        width: 48%;
+    } */
     /* --Contact-- */
     .contact .sectionContainer {
         grid-template: auto / 2fr 3fr;
@@ -676,10 +672,9 @@ footer span:last-child {
         border-bottom: var(--main_border_outline);
     }
     /* --Portfolio-- */
-    .portfolio .sectionContainer {
-        grid-template: repeat(6, auto) / 1fr;
-        grid-gap: 30px;
-    }
+    /* .portfolio {
+        width: 80%;
+    } */
     /* --Contact-- */
     .contact .sectionContainer {
         grid-template: auto auto / 1fr;
@@ -739,6 +734,13 @@ footer span:last-child {
     }
     section, nav {
         width: 90%;
+    }
+    /* --Porfolio-- */
+    .filterBox {
+        display: none;
+    }
+    .project a {
+        opacity: 0.7;
     }
     /* --Footer-- */
     footer span {
