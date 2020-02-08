@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(window).load(function() {
     const $container = $('.projects');
     $container.isotope({
         filter: '*',
