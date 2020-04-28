@@ -3,7 +3,7 @@ $(window).load(function() {
     $container.isotope({
         filter: '*',
         animationOptions: {
-            duration: 750,
+            duration: 1000,
             easing: 'linear',
             queue: false
         }
