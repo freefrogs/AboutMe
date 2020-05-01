@@ -311,6 +311,11 @@ nav ul a:hover {
 .projects {
     padding: 5px;
     min-height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    grid-gap: 10px;
+    margin-top: 20px;
 }
 
 .project {
@@ -319,10 +324,8 @@ nav ul a:hover {
 }
 
 .project > img {
-    max-width: 95%;
+    width: 100%;
     padding: 1%;
-    height: auto;
-    margin: 5px 0;
     box-shadow: 0 0 5px var(--detail_color);
 }
 
@@ -334,9 +337,9 @@ nav ul a:hover {
     left: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-52.5%,-51%);
-    width: 95%;
-    height: 95%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 97%;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-line-pack: center;
@@ -388,41 +391,13 @@ nav ul a:hover {
     flex-wrap: wrap;
 }
 
-.filterBox a {
+.filterBox button {
     margin: 10px;
     text-align: center;
 }
 
-.filterBox a.current {
+.filterBox button.current {
     background-color: var(--detail_color);
-}
-
-.isotope-item {
-    z-index: 2;
-}
-
-.isotope-hidden.isotope-item {
-    pointer-events: none;
-    z-index: 1;
-}
-
-.isotope,
-.isotope .isotope-item {
-    -webkit-transition-duration: 0.8s;
-    -moz-transition-duration: 0.8s;
-    transition-duration: 0.8s;
-}
-
-.isotope {
-    -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
-    transition-property: height, width;
-}
-
-.isotope .isotope-item {
-    -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
-    transition-property: transform, opacity;
 }
 
 /* --Contact-- */
@@ -609,6 +584,10 @@ footer span:last-child {
     .logos img {
         width: 15%;
     }
+    /* --Portfolio-- */
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
     /* --Contact-- */
 /*     .contact .sectionContainer {
         grid-template: auto / 2fr 3fr;
@@ -687,6 +666,10 @@ footer span:last-child {
     .skill3 {
         border-bottom: var(--main_border_outline);
     }
+    /* --Portfolio-- */
+    .projects {
+        grid-template-columns: 100%;
+    }
     /* --Contact-- */
 /*     .contact .sectionContainer {
         grid-template: auto auto / 1fr;
@@ -746,13 +729,6 @@ footer span:last-child {
     }
     section, nav {
         width: 90%;
-    }
-    /* --Porfolio-- */
-    .filterBox {
-        display: none;
-    }
-    .project a {
-        opacity: 0.7;
     }
     /* --Footer-- */
     footer span {
