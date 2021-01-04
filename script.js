@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const email = document.querySelector('.email');
 
     emailButton.addEventListener('click', function() {
-        const text = 'justyna.birenacka.1986'
+        const text = 'j.z.biernacka'
         email.innerText = `${text}@gmail.com`;
     });
 });
