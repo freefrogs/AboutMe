@@ -45,5 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     emailButton.addEventListener('click', function() {
         const text = 'j.z.biernacka'
         email.innerText = `${text}@gmail.com`;
+        emailButton.style.display = 'none';
     });
 });

@@ -90,6 +90,9 @@ section {
     background-color: var(--shadow_color);
     box-shadow: 0 2px 4px 2px var(--font_color);
     cursor: pointer;
+    border: none;
+    outline: none;
+    transition: .4s;
 }
 
 .main_button:hover {
